@@ -15,7 +15,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file template.yml \
-              --stack-name my-stack
+              --stack-name my-stack-via-github
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
