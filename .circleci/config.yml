@@ -10,11 +10,12 @@ jobs:
       - image: amazon/aws-cli
     steps:
       - checkout
-      - run: Ensure backend infrastructure exists
-        command: |
-          aws cloudformation deploy \
-          --template-file template.yml \
-          --stack-name my-stack
+      - run: 
+          name: Ensure backend infrastructure exists
+          command: |
+            aws cloudformation deploy \
+            --template-file template.yml \
+            --stack-name my-stack
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
